@@ -9,6 +9,9 @@ export default function Footer() {
           📞 <a href="tel:+16784310189" className="hover:text-primary">678-431-0189</a>
         </p>
         <p className="font-body">
+          🐙 <a href="https://github.com/SurajGeddam" target="_blank" rel="noopener noreferrer" className="hover:text-primary">github.com/SurajGeddam</a>
+        </p>
+        <p className="font-body">
           🔗 <a href="https://linkedin.com/in/suraj-geddam" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
             linkedin.com/in/suraj-geddam
           </a>

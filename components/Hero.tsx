@@ -32,12 +32,6 @@ export default function Hero() {
         >
           View Resume
         </a>
-        <a
-          href="/contact"
-          className="px-6 py-3 bg-primary text-white rounded-lg font-body hover:bg-opacity-80 transition-colors"
-        >
-          Contact Me
-        </a>
       </motion.div>
     </section>
   );

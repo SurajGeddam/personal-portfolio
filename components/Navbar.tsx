@@ -23,7 +23,6 @@ export default function Navbar() {
     { href: "/projects", label: "Projects" },
     { href: "/experience", label: "Experience" },
     { href: "/skills", label: "Skills" },
-    { href: "/contact", label: "Contact" },
   ];
   return (
     <nav className="fixed top-0 w-full backdrop-blur-md bg-white/30 dark:bg-gray-900/30 shadow-soft z-50">

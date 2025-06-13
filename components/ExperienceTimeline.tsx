@@ -6,28 +6,18 @@ const timelineItems = [
   // Education
   { type: "education", date: "2025-05", year: 2025, title: "MS in Machine Learning", organization: "Georgia Tech", location: "Atlanta, GA", bullets: [
     "GPA: 3.83",
-    "Machine Learning",
-    "Knowledge-Based AI",
-    "Computer Vision",
-    "Deep Learning"
+    "Core: Machine Learning, Knowledge-Based AI, Computer Vision, Deep Learning"
   ] },
   { type: "education", date: "2024-05", year: 2024, title: "BS in Computer Science", organization: "Georgia Tech", location: "Atlanta, GA", bullets: [
     "GPA: 4.0",
-    "Design & Analysis of Algorithms",
-    "Embodied Intelligence",
-    "Advanced Info Management",
-    "Data Structures & Algorithms",
-    "Systems & Networks"
+    "Core: Design & Analysis of Algorithms, Embodied Intelligence, Advanced Info Management, Data Structures & Algorithms, Systems & Networks"
   ] },
   { type: "experience", date: "2024-05_2024-08", year: 2024, title: "Software Eng Intern", organization: "Fiserv", location: "Alpharetta, GA", bullets: ["End-to-end API development with unit & integration tests", "Debugged CAT vs PROD DML configs in Spring Boot", "Built service/controller layers to maintain system integrity"] },
   { type: "experience", date: "2023-05_2024-05", year: 2023, title: "Software Eng Intern", organization: "Cox Automotive", location: "Atlanta, GA", bullets: ["Integrated OCI Document Understanding, improving parsability by 50%", "Derived 70% readability & 80% accuracy metrics to justify project continuation", "Built Django/REST API to boost operational efficiency by 30%"] },
   { type: "experience", date: "2022-05_2022-08", year: 2022, title: "Software Eng Intern", organization: "Cox Automotive", location: "Atlanta, GA", bullets: ["Spearheaded 250+ hours of research on OCI services and integration testing", "Developed automated invoice processing using OCI AI Vision for 10,000 invoices", "Analyzed results against Cox's EBS database for accuracy benchmarks"] },
   { type: "education", date: "2021-05", year: 2021, title: "Dual Enrollment Complete", organization: "Georgia Tech", location: "Atlanta, GA", bullets: [
     "Non-Degree in Computational & Applied Mathematics",
-    "Applied Combinatorics",
-    "Linear Algebra",
-    "Multivariable Calculus",
-    "Differential Calculus"
+    "Core: Applied Combinatorics, Linear Algebra, Multivariable Calculus, Differential Calculus"
   ] },
   { type: "education", date: "2021-05", year: 2021, title: "Graduated High School", organization: "Lambert High School", location: "Alpharetta, GA", bullets: ["Rank: 4/763", "Weighted GPA: 4.71, Unweighted GPA: 4.0"] },
   { type: "experience", date: "2020-08_2021-01", year: 2020, title: "Software Eng Intern & Data Analyst", organization: "Octave Holdings / Pinnacle Leasing", location: "Alpharetta, GA", bullets: ["Built pricing model visualizer & analyzed P&L statements", "Researched $100M property investments & crafted strategy", "Managed investor leasing agreements using 6 months of data"] },
