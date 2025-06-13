@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { parse, format } from "date-fns";
 
 const timelineItems = [
   // Education
@@ -36,6 +37,19 @@ const itemVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0 },
 };
+
+// Helper to format dates
+function formatTimelineDate(item: typeof timelineItems[number]) {
+  if (item.type === "experience") {
+    const [start, end] = item.date.split("_");
+    const startDate = parse(start, "yyyy-MM", new Date());
+    const endDate = parse(end, "yyyy-MM", new Date());
+    return `${format(startDate, "MMM yyyy")} – ${format(endDate, "MMM yyyy")}`;
+  } else {
+    const date = parse(item.date, "yyyy-MM", new Date());
+    return format(date, "MMM yyyy");
+  }
+}
 
 export default function ExperienceTimeline() {
   let blockIdx = 0;
@@ -78,7 +92,7 @@ export default function ExperienceTimeline() {
                     }
                     variants={itemVariants}
                   >
-                    <p className="text-sm text-gray-500 dark:text-gray-400">{item.date.replace(/-.*/, "")}</p>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">{formatTimelineDate(item)}</p>
                     <h3 className="text-xl font-heading">{item.title}</h3>
                     <p className="font-body italic mb-2">
                       {item.organization} — {item.location}
