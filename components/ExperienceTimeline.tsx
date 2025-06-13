@@ -68,9 +68,9 @@ export default function ExperienceTimeline() {
       <h2 className="text-3xl font-heading text-center mb-12">Timeline</h2>
       <div className="relative">
         {/* vertical center line */}
-        <div className="absolute left-1/2 top-0 w-px h-full bg-gray-300 dark:bg-gray-600" />
+        <div className="hidden md:block absolute left-1/2 top-0 w-px h-full bg-gray-300 dark:bg-gray-600" />
         <motion.div
-          className="grid grid-cols-9 gap-8 items-start relative"
+          className="grid grid-cols-1 md:grid-cols-9 gap-6 md:gap-8 items-start relative"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
@@ -78,14 +78,14 @@ export default function ExperienceTimeline() {
         >
           {years.map((year) => (
             <>
-              <div key={year} className="col-span-9 text-center mb-4 mt-8">
+              <div key={year} className="col-span-1 md:col-span-9 text-center mb-4 mt-8">
                 <span className="inline-block bg-primary text-white rounded-full px-4 py-1 text-lg font-heading shadow-soft">
                   {year}
                 </span>
               </div>
               {groupedByYear[year].map((item: typeof timelineItems[number]) => {
                 const isLeft = blockIdx++ % 2 === 0;
-                const base = "col-span-4 p-6 rounded-lg";
+                const base = "col-span-1 md:col-span-4 p-4 md:p-6 rounded-lg";
                 const style =
                   item.type === "education"
                     ? "border-2 border-accent bg-accent/10"
@@ -97,13 +97,15 @@ export default function ExperienceTimeline() {
                       base +
                       " " +
                       style +
-                      " " +
-                      (isLeft ? "col-start-1 text-left" : "col-start-6 text-right")
+                      (isLeft
+                        ? " md:col-start-1 text-left"
+                        : " md:col-start-6 text-right") +
+                      " mx-auto w-full"
                     }
                     variants={itemVariants}
                   >
                     <p className="text-sm text-gray-500 dark:text-gray-400">{formatTimelineDate(item)}</p>
-                    <h3 className="text-xl font-heading">{item.title}</h3>
+                    <h3 className="text-lg md:text-xl font-heading">{item.title}</h3>
                     <p className="font-body italic mb-2">
                       {item.organization} — {item.location}
                     </p>
