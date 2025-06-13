@@ -1,49 +1,84 @@
 "use client";
-import React from "react";
 
-const experiences = [
+const timelineItems = [
   {
-    date: "May 2024 – Aug 2024",
-    role: "Software Engineering Intern",
-    company: "Fiserv",
-    location: "Alpharetta, GA",
+    type: 'education',
+    date: 'May 2021',
+    title: 'Graduated High School',
+    organization: 'Lambert High School',
+    location: 'Alpharetta, GA',
     bullets: [
-      "Created an end-to-end API within the existing platform, with unit and integration tests.",
-      "Located discrepancies between CAT and PROD DML configurations using Java Spring Boot.",
-      "Built entities, repositories, service, and controller classes to maintain system integrity."
+      'Rank: 4/763',
+      'Weighted GPA: 4.71, Unweighted GPA: 4.0',
     ],
   },
   {
-    date: "May 2023 – May 2024",
-    role: "Software Engineering Intern",
-    company: "Cox Automotive Inc.",
-    location: "Atlanta, GA · Hybrid",
+    type: 'education',
+    date: 'May 2021',
+    title: 'Dual Enrollment Complete',
+    organization: 'Georgia Institute of Technology',
+    location: 'Atlanta, GA',
     bullets: [
-      "Integrated OCI Document Understanding into previous year's invoice image processing project to improve parsability by 50%.",
-      "Derived statistical conclusions on service producing 70% readability and 80% data accuracy confirming project continuation.",
-      "Utilized Django and REST APIs to create a robust application that increased operational efficiency by 30% for Cox."
+      'Non-Degree in Computational & Applied Mathematics',
+      'GPA: 4.0',
     ],
   },
   {
-    date: "May 2022 – Aug 2022",
-    role: "Software Engineering Intern",
-    company: "Cox Automotive Inc.",
-    location: "Atlanta, GA · Hybrid",
+    type: 'education',
+    date: 'May 2024',
+    title: 'BS in Computer Science',
+    organization: 'Georgia Tech',
+    location: 'Atlanta, GA',
     bullets: [
-      "Spearheaded 250+ hours of research on OCI services and integration testing with multiple databases.",
-      "Developed an automated invoice image processing system using OCI AI Vision technology and presented ideas to 200 executives.",
-      "Performed analysis on 10,000 company invoices and compared application functionality against Cox's standard EBS database."
+      'GPA: 4.0',
+      'Core: Algorithms, Systems & Networks, Computational Complexity',
     ],
   },
   {
-    date: "Aug 2020 – Jan 2021",
-    role: "Software Engineering Intern & Data Analyst",
-    company: "Octave Holdings/Invesment & Pinnacle Leasing and Management",
-    location: "Alpharetta, GA",
+    type: 'education',
+    date: 'May 2025',
+    title: 'MS in Machine Learning',
+    organization: 'Georgia Tech',
+    location: 'Atlanta, GA',
     bullets: [
-      "Built pricing model display software and analyzed incoming P&L statements.",
-      "Researched investment opportunities and crafted strategies for a $100M property portfolio.",
-      "Collaborated with executives to manage investor leasing agreements based on 6 months of data."
+      'GPA: 3.83',
+      'Core: Computer Vision, Deep Learning, Knowledge-Based AI',
+    ],
+  },
+  {
+    type: 'experience',
+    date: 'May 2024 – Aug 2024',
+    title: 'Software Eng Intern',
+    organization: 'Fiserv',
+    location: 'Alpharetta, GA',
+    bullets: [
+      'End-to-end API development with unit & integration tests',
+      'Debugged CAT vs PROD DML configs in Spring Boot',
+      'Built service/controller layers to maintain system integrity',
+    ],
+  },
+  {
+    type: 'experience',
+    date: 'May 2023 – May 2024',
+    title: 'Software Eng Intern',
+    organization: 'Cox Automotive',
+    location: 'Atlanta, GA',
+    bullets: [
+      'Integrated OCI Document Understanding, improving parsability by 50%',
+      'Derived 70% readability & 80% accuracy metrics to justify project continuation',
+      'Built Django/REST API to boost operational efficiency by 30%',
+    ],
+  },
+  {
+    type: 'experience',
+    date: 'Aug 2020 – Jan 2021',
+    title: 'Software Eng Intern & Data Analyst',
+    organization: 'Octave Holdings / Pinnacle Leasing',
+    location: 'Alpharetta, GA',
+    bullets: [
+      'Built pricing model visualizer & analyzed P&L statements',
+      'Researched $100M property investments & crafted strategy',
+      'Managed investor leasing agreements with 6 months of data',
     ],
   },
 ];
@@ -51,49 +86,36 @@ const experiences = [
 export default function ExperienceTimeline() {
   return (
     <section className="max-w-5xl mx-auto py-16 px-4">
-      <h2 className="text-3xl font-heading mb-8 text-center">Experience</h2>
-      <div className="relative">
-        <div className="absolute left-1/2 top-0 w-1 h-full bg-gray-300 dark:bg-gray-600 -translate-x-1/2 z-0" />
-        <div className="grid grid-cols-3 gap-y-16 relative z-10">
-          {experiences.map((exp, idx) => (
-            <React.Fragment key={exp.date}>
-              {/* Left card */}
-              <div className={`col-span-1 flex justify-end ${idx % 2 !== 0 ? "opacity-0 pointer-events-none" : ""}`}>
-                {idx % 2 === 0 && (
-                  <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-soft w-full max-w-md text-right">
-                    <p className="text-sm text-gray-500 dark:text-gray-400">{exp.date}</p>
-                    <h3 className="text-xl font-heading">{exp.role}</h3>
-                    <p className="font-body italic mb-2">{exp.company} — {exp.location}</p>
-                    <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
-                      {exp.bullets.map((b, i) => (
-                        <li key={i}>{b}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-              {/* Center dot */}
-              <div className="col-span-1 flex flex-col items-center relative">
-                <div className="w-5 h-5 bg-primary rounded-full border-4 border-white dark:border-gray-900 z-10" />
-              </div>
-              {/* Right card */}
-              <div className={`col-span-1 flex justify-start ${idx % 2 === 0 ? "opacity-0 pointer-events-none" : ""}`}>
-                {idx % 2 !== 0 && (
-                  <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-soft w-full max-w-md text-left">
-                    <p className="text-sm text-gray-500 dark:text-gray-400">{exp.date}</p>
-                    <h3 className="text-xl font-heading">{exp.role}</h3>
-                    <p className="font-body italic mb-2">{exp.company} — {exp.location}</p>
-                    <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
-                      {exp.bullets.map((b, i) => (
-                        <li key={i}>{b}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-            </React.Fragment>
-          ))}
-        </div>
+      <h2 className="text-3xl font-heading text-center mb-12">Timeline</h2>
+      <div className="relative grid grid-cols-9 gap-8 items-start">
+        {/* Center line */}
+        <div className="col-start-5 col-end-6 mx-auto w-px bg-gray-300 dark:bg-gray-600 h-full"></div>
+
+        {timelineItems.map((item, idx) => {
+          const isLeft = idx % 2 === 0;
+          const baseClasses = 'col-span-4 p-6 rounded-lg';
+          const eduClasses = 'border-2 border-accent bg-accent/10';
+          const expClasses = 'bg-white dark:bg-gray-800 shadow-soft';
+          return (
+            <div
+              key={item.date + item.title}
+              className={`${baseClasses} ${item.type === 'education' ? eduClasses : expClasses} ${
+                isLeft ? 'col-start-1 text-left' : 'col-start-6 text-right'
+              }`}
+            >
+              <p className="text-sm text-gray-500 dark:text-gray-400">{item.date}</p>
+              <h3 className="text-xl font-heading">{item.title}</h3>
+              <p className="font-body italic mb-2">
+                {item.organization} — {item.location}
+              </p>
+              <ul className="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
+                {item.bullets.map((b, i) => (
+                  <li key={i}>{b}</li>
+                ))}
+              </ul>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
