@@ -126,14 +126,23 @@ export default function Projects() {
                 </span>
               ))}
             </div>
-            <a
-              href={p.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary font-body hover:underline"
-            >
-              View Project
-            </a>
+            {p.href ? (
+              <a
+                href={p.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary font-body hover:underline"
+              >
+                View Project
+              </a>
+            ) : (
+              <span className="inline-flex items-center text-gray-400 font-body">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 17a2 2 0 100-4 2 2 0 000 4zm6-6V9a6 6 0 10-12 0v2a2 2 0 00-2 2v6a2 2 0 002 2h12a2 2 0 002-2v-6a2 2 0 00-2-2zm-2 0H8V9a4 4 0 118 0v2z" />
+                </svg>
+                Restricted
+              </span>
+            )}
           </motion.div>
         ))}
       </motion.div>
