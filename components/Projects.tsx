@@ -68,12 +68,17 @@ const projects = [
 
 const categories = [
   "All",
-  "Oracle AI Vision",
-  "Linux",
-  "REST API",
-  "Spring Boot",
-  "Django",
-  "Tableau",
+  "Python",
+  "Java",
+  "SQL",
+  "JavaScript",
+  "C/C++",
+  "API's",
+  "AI",
+  "GitHub",
+  "Company",
+  "Personal",
+  "School",
 ];
 
 export default function Projects() {
