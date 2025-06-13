@@ -24,6 +24,34 @@ const projects = [
     tech: ["Firebase", "React", "Node.js"],
     href: "https://github.com/SurajGeddam/VolunTrack",
   },
+  {
+    title: "Personal Portfolio",
+    description:
+      "A modern, animated portfolio site to showcase my projects, experience, and skills. Built to establish my personal brand and provide a professional online presence. Features responsive design, dark mode, Framer Motion animations, and a clean UI. Built with Next.js, React, Tailwind CSS, and deployed on Vercel.",
+    tech: ["Next.js", "React", "Tailwind CSS", "Framer Motion", "Vercel"],
+    href: "https://github.com/SurajGeddam/personal-portfolio",
+  },
+  {
+    title: "Ref Token (Telegram Bot)",
+    description:
+      "A Telegram bot for tracking group invites, running challenge events, and managing prize information with time limits. Features anti-bot protection and real-time invite tracking. Built using Python, Rust, and Telegram Bot API (python-telegram-bot, aiogram).",
+    tech: ["Python", "Rust", "Telegram Bot API", "aiogram", "python-telegram-bot"],
+    href: "https://github.com/SurajGeddam/ref-token-bot",
+  },
+  {
+    title: "Worlds-Hardest-Game-Spin-Off",
+    description:
+      "A spin-off of the World's Hardest Game for GameBoy Advance. Developed in C for CS 2110. Features challenging levels and retro gameplay.",
+    tech: ["C", "GameBoy Advance"],
+    href: "https://github.com/SurajGeddam/Worlds-Hardest-Game-Spin-Off",
+  },
+  {
+    title: "Clash-Defense-Game",
+    description:
+      "A Clash Royale-themed Tower Defense game built for CS 2340. Developed using Java, Android Studio, and Python for scripting. Features custom levels, enemy AI, and mobile gameplay.",
+    tech: ["Java", "Android Studio", "Python"],
+    href: "https://github.com/SurajGeddam/Clash-Defense-Game",
+  },
 ];
 
 const categories = ["All", "Python", "JavaScript", "AI", "Web", "React"];
