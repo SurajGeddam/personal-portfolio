@@ -27,8 +27,12 @@ export default function ContactForm() {
       });
       if (!res.ok) throw new Error("Submission failed");
       reset();
-    } catch (err: any) {
-      setServerError(err.message);
+    } catch (err: unknown) {
+      if (err instanceof Error) {
+        setServerError(err.message);
+      } else {
+        setServerError("An unknown error occurred");
+      }
     }
   };
 
@@ -42,7 +46,7 @@ export default function ContactForm() {
     >
       {isSubmitSuccessful && (
         <div className="p-4 bg-green-100 text-green-800 rounded">
-          Thanks for your message! I'll get back to you soon.
+          Thanks for your message! I&apos;ll get back to you soon.
         </div>
       )}
       {serverError && (
