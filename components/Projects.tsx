@@ -7,8 +7,7 @@ const projects = [
     title: "Undergraduate Research – Collab Web",
     description:
       "Trained Google's Palm2 LLM on 10 years of Georgia Tech student records to build a chatbot for efficient data queries; organized data in MySQL and created 5 visualization tools.",
-    tech: ["Python", "Aura", "Jupyter", "Neo4j", "Palm2", "SQL", "Cypher", "AI", "Tableau", "GitHub", "Jupyter", "Personal"],
-    href: "https://github.com/SurajGeddam/Collab-Web",
+    tech: ["Python", "Aura", "Jupyter", "Neo4j", "Palm2", "SQL", "Cypher", "AI", "Tableau", "GitHub", "Jupyter", "School"],
   },
   {
     title: "SeekNSpot",
@@ -105,22 +104,22 @@ export default function Projects() {
           </button>
         ))}
       </div>
-      <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 xl:gap-10 px-2 sm:px-4 md:px-8">
         {filtered.map((p) => (
           <motion.div
             key={p.title}
             whileHover={{ scale: 1.05 }}
-            className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-soft"
+            className="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-lg shadow-soft flex flex-col h-full min-h-[320px] transition-transform"
           >
-            <h3 className="text-xl font-heading mb-2">{p.title}</h3>
-            <p className="text-body text-gray-600 dark:text-gray-300 mb-4">
+            <h3 className="text-lg sm:text-xl font-heading mb-2 break-words">{p.title}</h3>
+            <p className="text-body text-gray-600 dark:text-gray-300 mb-4 text-sm sm:text-base">
               {p.description}
             </p>
             <div className="flex flex-wrap gap-2 mb-4">
               {p.tech.map((t) => (
                 <span
                   key={t}
-                  className="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded-full"
+                  className="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded-full mb-1"
                 >
                   {t}
                 </span>
