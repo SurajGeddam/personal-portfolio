@@ -7,14 +7,14 @@ const projects = [
     title: "Undergraduate Research – Collab Web",
     description:
       "Trained Google's Palm2 LLM on 10 years of Georgia Tech student records to build a chatbot for efficient data queries; organized data in MySQL and created 5 visualization tools.",
-    tech: ["Python", "Aura", "Jupyter", "Neo4j", "Palm2", "SQL"],
+    tech: ["Python", "Aura", "Jupyter", "Neo4j", "Palm2", "SQL", "Cypher", "AI"],
     href: "https://github.com/SurajGeddam/Collab-Web",
   },
   {
     title: "SeekNSpot",
     description:
-      "Published a YouTube Chrome extension powered by Llama2 for quizzes, answers, and translations; integrated YouTube APIs to navigate to relevant timestamps.",
-    tech: ["Python", "JavaScript", "Flask", "Streamlit", "Llama2"],
+      "Published a YouTube Chrome extension powered by Llama2 for quizzes, answers, and translations; integrated YouTube APIs and OpenAI API to navigate to relevant timestamps and generate content.",
+    tech: ["Python", "JavaScript", "Flask", "Streamlit", "Llama2", "OpenAI API", "YouTube API", "API's", "AI"],
     href: "https://github.com/SurajGeddam/SeekNSpot",
   },
   {
@@ -35,7 +35,7 @@ const projects = [
     title: "Ref Token (Telegram Bot)",
     description:
       "A Telegram bot for tracking group invites, running challenge events, and managing prize information with time limits. Features anti-bot protection and real-time invite tracking. Built using Python, Rust, and Telegram Bot API (python-telegram-bot, aiogram).",
-    tech: ["Python", "Rust", "Telegram Bot API", "aiogram", "python-telegram-bot"],
+    tech: ["Python", "Rust", "Telegram Bot API", "aiogram", "python-telegram-bot", "API's"],
     href: "https://github.com/SurajGeddam/ref-token-bot",
   },
   {
@@ -64,6 +64,8 @@ const categories = [
   "SQL",
   "JavaScript",
   "C/C++",
+  "API's",
+  "AI",
 ];
 
 export default function Projects() {
