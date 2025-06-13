@@ -67,7 +67,7 @@ export default function Skills() {
           {filtered.map(skill => (
             <motion.span
               key={skill.name}
-              className="relative flex flex-col items-center justify-center bg-gray-200 dark:bg-gray-700 rounded-full shadow-soft cursor-pointer min-w-[64px] min-h-[64px] w-16 h-16 group transition-transform hover:scale-110"
+              className="relative flex flex-col items-center justify-center bg-gray-200 dark:bg-gray-700 rounded-full shadow-soft cursor-pointer min-w-[96px] min-h-[96px] w-24 h-24 group transition-transform hover:scale-110"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 }
@@ -75,12 +75,12 @@ export default function Skills() {
               exit={{ opacity: 0, y: -20 }}
             >
               {skill.image ? (
-                <img src={skill.image} alt={skill.name + ' icon'} className="w-16 h-16 object-contain rounded-full" />
+                <img src={skill.image} alt={skill.name + ' icon'} className="w-24 h-24 object-contain rounded-full" />
               ) : (
                 <span className="text-sm font-body text-gray-800 dark:text-gray-200">{skill.name}</span>
               )}
               {skill.image && (
-                <span className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white text-base font-bold rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white text-lg font-bold rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
                   {skill.name}
                 </span>
               )}
