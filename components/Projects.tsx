@@ -7,7 +7,7 @@ const projects = [
     title: "Undergraduate Research – Collab Web",
     description:
       "Trained Google's Palm2 LLM on 10 years of Georgia Tech student records to build a chatbot for efficient data queries; organized data in MySQL and created 5 visualization tools.",
-    tech: ["Python", "Aura", "Jupyter", "Neo4j", "Palm2"],
+    tech: ["Python", "Aura", "Jupyter", "Neo4j", "Palm2", "SQL"],
     href: "https://github.com/SurajGeddam/Collab-Web",
   },
   {
@@ -21,7 +21,7 @@ const projects = [
     title: "VolunTrack",
     description:
       "Built a volunteer event sign-in and hour-logging app using QR code tech with Firebase & React; designed roles for organizers and volunteers to track hours.",
-    tech: ["Firebase", "React", "Node.js"],
+    tech: ["Firebase", "React", "Node.js", "JavaScript"],
     href: "https://github.com/SurajGeddam/VolunTrack",
   },
   {
@@ -42,7 +42,7 @@ const projects = [
     title: "Worlds-Hardest-Game-Spin-Off",
     description:
       "A spin-off of the World's Hardest Game for GameBoy Advance. Developed in C for CS 2110. Features challenging levels and retro gameplay.",
-    tech: ["C", "GameBoy Advance"],
+    tech: ["C", "C/C++", "GameBoy Advance"],
     href: "https://github.com/SurajGeddam/Worlds-Hardest-Game-Spin-Off",
   },
   {
@@ -61,8 +61,8 @@ const categories = [
   "React",
   "Node.js",
   "Rust",
-  "Android Studio",
   "SQL",
+  "JavaScript",
   "C/C++",
 ];
 
