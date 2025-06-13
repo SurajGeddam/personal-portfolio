@@ -15,14 +15,14 @@ const projects = [
     description:
       "Published a YouTube Chrome extension powered by Llama2 for quizzes, answers, and translations; integrated YouTube APIs and OpenAI API to navigate to relevant timestamps and generate content.",
     tech: ["Python", "JavaScript", "Flask", "Streamlit", "Llama2", "OpenAI API", "YouTube API", "API's", "AI", "Personal"],
-    href: "https://github.com/SurajGeddam/SeekNSpot",
+    href: "https://devpost.com/software/seeknspot",
   },
   {
     title: "VolunTrack",
     description:
       "Built a volunteer event sign-in and hour-logging app using QR code tech with Firebase & React; designed roles for organizers and volunteers to track hours.",
     tech: ["Firebase", "React", "Node.js", "JavaScript", "Personal"],
-    href: "https://github.com/SurajGeddam/VolunTrack",
+    href: "https://devpost.com/software/voluntrack",
   },
   {
     title: "Personal Portfolio",
@@ -36,7 +36,7 @@ const projects = [
     description:
       "A Telegram bot for tracking group invites, running challenge events, and managing prize information with time limits. Features anti-bot protection and real-time invite tracking. Built using Python, Rust, and Telegram Bot API (python-telegram-bot, aiogram).",
     tech: ["Python", "Rust", "Telegram Bot API", "aiogram", "python-telegram-bot", "API's", "Personal"],
-    href: "https://github.com/SurajGeddam/ref-token-bot",
+    href: "https://github.com/SurajGeddam/REF",
   },
   {
     title: "Worlds-Hardest-Game-Spin-Off",
@@ -78,7 +78,6 @@ const categories = [
   "GitHub",
   "Company",
   "Personal",
-  "School",
 ];
 
 export default function Projects() {
