@@ -69,8 +69,8 @@ export default function Skills() {
               exit={{ opacity: 0, y: -20 }}
             >
               {skill.image ? (
-                <span className="flex items-center justify-center w-40 h-40 bg-white rounded-full">
-                  <img src={skill.image} alt={skill.name + ' icon'} className="w-32 h-32 object-contain" />
+                <span className="flex items-center justify-center w-44 h-44 bg-white rounded-full">
+                  <img src={skill.image} alt={skill.name + ' icon'} className="object-contain w-36 h-24" />
                 </span>
               ) : (
                 <span className="text-sm font-body text-gray-800 dark:text-gray-200">{skill.name}</span>
