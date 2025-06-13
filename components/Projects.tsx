@@ -7,7 +7,7 @@ const projects = [
     title: "Undergraduate Research – Collab Web",
     description:
       "Trained Google's Palm2 LLM on 10 years of Georgia Tech student records to build a chatbot for efficient data queries; organized data in MySQL and created 5 visualization tools.",
-    tech: ["Python", "Aura", "Jupyter", "Neo4j", "Palm2", "SQL", "Cypher", "AI"],
+    tech: ["Python", "Aura", "Jupyter", "Neo4j", "Palm2", "SQL", "Cypher", "AI", "Tableau", "GitHub", "Jupyter"],
     href: "https://github.com/SurajGeddam/Collab-Web",
   },
   {
@@ -52,6 +52,18 @@ const projects = [
     tech: ["Java", "Android Studio", "Python"],
     href: "https://github.com/SurajGeddam/Clash-Defense-Game",
   },
+  {
+    title: "Company Project: Automated Invoice Processing (Cox Automotive)",
+    description:
+      "Led 250+ hours of research on OCI services and integration testing. Developed an automated invoice image processing system using OCI AI Vision, presenting to 200 executives. Analyzed 10,000 invoices, benchmarking against Cox's EBS database. Integrated OCI Document Understanding to improve parsability by 50%, achieving 70% readability and 80% data accuracy. Built robust Django and REST API applications, increasing operational efficiency by 30%.",
+    tech: ["Linux", "SQL", "Python", "Oracle AI Vision", "GitHub", "REST API", "Django", "AI", "API's"],
+  },
+  {
+    title: "Company Project: Platform API Development (Fiserv)",
+    description:
+      "Created an end-to-end API within an enterprise platform, including unit and integration testing. Diagnosed discrepancies between CAT and PROD DML configs using Java Spring Boot. Built entities, repositories, services, and controllers to ensure system integrity.",
+    tech: ["Java", "Spring Boot", "API's", "SQL", "GitHub"],
+  },
 ];
 
 const categories = [
@@ -66,6 +78,13 @@ const categories = [
   "C/C++",
   "API's",
   "AI",
+  "Oracle AI Vision",
+  "Linux",
+  "REST API",
+  "Spring Boot",
+  "Django",
+  "GitHub",
+  "Tableau",
 ];
 
 export default function Projects() {
