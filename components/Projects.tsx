@@ -54,7 +54,17 @@ const projects = [
   },
 ];
 
-const categories = ["All", "Python", "JavaScript", "AI", "Web", "React"];
+const categories = [
+  "All",
+  "Python",
+  "Java",
+  "React",
+  "Node.js",
+  "Rust",
+  "Android Studio",
+  "SQL",
+  "C/C++",
+];
 
 export default function Projects() {
   const [filter, setFilter] = useState("All");
