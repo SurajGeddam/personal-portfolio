@@ -9,11 +9,11 @@ const skills = [
   { name: "C/C++", category: "Languages", image: "/c:c++.png" },
   { name: "SQL", category: "Languages", image: "/sql.png" },
   { name: "JavaScript", category: "Languages", image: "/javascript.png" },
-  { name: "HTML/CSS", category: "Languages" },
-  { name: "Rust", category: "Languages" },
-  { name: "R", category: "Languages" },
-  { name: "React", category: "Frameworks" },
-  { name: "Django", category: "Frameworks" },
+  { name: "HTML/CSS", category: "Languages", image: "/html:css.jpeg" },
+  { name: "Rust", category: "Languages", image: "/rust.png" },
+  { name: "R", category: "Languages", image: "/r.jpeg" },
+  { name: "React", category: "Frameworks", image: "/react.png" },
+  { name: "Django", category: "Frameworks", image: "/django.png" },
   { name: "Angular", category: "Frameworks" },
   { name: "Flask", category: "Frameworks" },
   { name: "Spring Boot", category: "Frameworks" },
@@ -73,7 +73,9 @@ export default function Skills() {
               exit={{ opacity: 0, y: -20 }}
             >
               {skill.image ? (
-                <img src={skill.image} alt={skill.name + ' icon'} className="w-32 h-32 object-contain rounded-full" />
+                <span className="flex items-center justify-center w-32 h-32 bg-white rounded-full">
+                  <img src={skill.image} alt={skill.name + ' icon'} className="w-24 h-24 object-contain" />
+                </span>
               ) : (
                 <span className="text-sm font-body text-gray-800 dark:text-gray-200">{skill.name}</span>
               )}
