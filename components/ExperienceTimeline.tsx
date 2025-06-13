@@ -17,6 +17,7 @@ const timelineItems = [
   { type: "experience", date: "2022-05_2022-08", year: 2022, title: "Software Eng Intern", organization: "Cox Automotive", location: "Atlanta, GA", bullets: ["Spearheaded 250+ hours of research on OCI services and integration testing", "Developed automated invoice processing using OCI AI Vision for 10,000 invoices", "Analyzed results against Cox's EBS database for accuracy benchmarks"] },
   { type: "education", date: "2021-05", year: 2021, title: "Dual Enrollment Complete", organization: "Georgia Tech", location: "Atlanta, GA", bullets: [
     "Non-Degree in Computational & Applied Mathematics",
+    "GPA: 4.0/4.0",
     "Core: Applied Combinatorics, Linear Algebra, Multivariable Calculus, Differential Calculus"
   ] },
   { type: "education", date: "2021-05", year: 2021, title: "Graduated High School", organization: "Lambert High School", location: "Alpharetta, GA", bullets: ["Rank: 4/763", "Weighted GPA: 4.71, Unweighted GPA: 4.0"] },

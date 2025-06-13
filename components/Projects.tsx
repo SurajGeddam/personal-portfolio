@@ -55,36 +55,25 @@ const projects = [
   {
     title: "Company Project: Automated Invoice Processing (Cox Automotive)",
     description:
-      "Led 250+ hours of research on OCI services and integration testing. Developed an automated invoice image processing system using OCI AI Vision, presenting to 200 executives. Analyzed 10,000 invoices, benchmarking against Cox's EBS database. Integrated OCI Document Understanding to improve parsability by 50%, achieving 70% readability and 80% data accuracy. Built robust Django and REST API applications, increasing operational efficiency by 30%.",
-    tech: ["Linux", "SQL", "Python", "Oracle AI Vision", "GitHub", "REST API", "Django", "AI", "API's", "Company"],
+      "Automated invoice image processing system using OCI AI Vision and Document Understanding; improved parsability by 50% and achieved 80% data accuracy. Led research, analysis, and presented to 200 executives.",
+    tech: ["Linux", "SQL", "Python", "Oracle AI Vision", "GitHub", "Django", "AI", "API's", "Company"],
   },
   {
     title: "Company Project: Platform API Development (Fiserv)",
     description:
-      "Created an end-to-end API within an enterprise platform, including unit and integration testing. Diagnosed discrepancies between CAT and PROD DML configs using Java Spring Boot. Built entities, repositories, services, and controllers to ensure system integrity.",
+      "Developed and tested end-to-end APIs using Java Spring Boot; resolved DML config issues and built robust service layers for system integrity.",
     tech: ["Java", "Spring Boot", "API's", "SQL", "GitHub", "Company"],
   },
 ];
 
 const categories = [
   "All",
-  "Python",
-  "Java",
-  "SQL",
-  "JavaScript",
-  "C/C++",
-  "API's",
-  "AI",
   "Oracle AI Vision",
   "Linux",
   "REST API",
   "Spring Boot",
   "Django",
-  "GitHub",
   "Tableau",
-  "Company",
-  "Personal",
-  "School",
 ];
 
 export default function Projects() {
