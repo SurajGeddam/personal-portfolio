@@ -1,41 +1,30 @@
 "use client";
-import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { useState } from "react";
+
 export default function Navbar() {
-  const [mounted, setMounted] = useState(false);
-  const [dark, setDark] = useState(false);
   const pathname = usePathname();
-  useEffect(() => {
-    setMounted(true);
-    const stored = localStorage.getItem("theme");
-    setDark(stored === "dark");
-    document.documentElement.classList.toggle("dark", stored === "dark");
-  }, []);
-  const toggleDark = () => {
-    const next = !dark;
-    setDark(next);
-    document.documentElement.classList.toggle("dark", next);
-    localStorage.setItem("theme", next ? "dark" : "light");
-  };
   const links = [
     { href: "/", label: "Home" },
     { href: "/projects", label: "Projects" },
     { href: "/experience", label: "Experience" },
     { href: "/skills", label: "Skills" },
   ];
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="fixed top-0 w-full backdrop-blur-md bg-white/30 dark:bg-gray-900/30 shadow-soft z-50">
       <div className="max-w-5xl mx-auto flex items-center justify-between p-4">
         <Link href="/" className="text-2xl font-heading font-bold">
           SurajG.
         </Link>
-        <div className="hidden md:flex space-x-6">
+        <div className="hidden md:flex space-x-16">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className={`font-body ${
+              className={`font-body text-lg md:text-xl ${
                 pathname === l.href ? "text-primary" : "text-gray-700 dark:text-gray-300"
               } hover:text-primary transition-colors`}
             >
@@ -43,11 +32,32 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <button onClick={toggleDark} className="ml-4 p-2 rounded-lg">
-          {mounted ? (dark ? "🌞" : "🌙") : null}
-        </button>
         <div className="md:hidden">
-          {/* You can add a hamburger icon & mobile menu here */}
+          <button
+            onClick={() => setMenuOpen((v) => !v)}
+            className="p-2 rounded focus:outline-none focus:ring-2 focus:ring-primary"
+            aria-label="Open menu"
+          >
+            <svg className="h-7 w-7 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          {menuOpen && (
+            <div className="absolute right-4 top-16 bg-white dark:bg-gray-900 rounded-lg shadow-lg py-2 px-4 flex flex-col space-y-2 min-w-[140px] border border-gray-200 dark:border-gray-700 z-50">
+              {links.map((l) => (
+                <Link
+                  key={l.href}
+                  href={l.href}
+                  className={`font-body text-base py-2 px-2 rounded hover:bg-primary/10 ${
+                    pathname === l.href ? "text-primary" : "text-gray-700 dark:text-gray-300"
+                  }`}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {l.label}
+                </Link>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </nav>
