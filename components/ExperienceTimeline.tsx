@@ -59,7 +59,7 @@ export default function ExperienceTimeline() {
                   {year}
                 </span>
               </div>
-              {groupedByYear[year].map((item: typeof timelineItems[number], _idx: number) => {
+              {groupedByYear[year].map((item: typeof timelineItems[number]) => {
                 const isLeft = blockIdx++ % 2 === 0;
                 const base = "col-span-4 p-6 rounded-lg";
                 const style =
