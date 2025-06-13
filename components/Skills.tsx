@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 const categories = ["All", "Languages", "Frameworks", "Tools"];
 const skills = [
   { name: "Java", category: "Languages" },
-  { name: "Python", category: "Languages" },
+  { name: "Python", category: "Languages", image: "/python.jpeg" },
   { name: "C/C++", category: "Languages" },
   { name: "SQL", category: "Languages" },
   { name: "JavaScript", category: "Languages" },
@@ -67,7 +67,7 @@ export default function Skills() {
           {filtered.map(skill => (
             <motion.span
               key={skill.name}
-              className="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full font-body text-sm shadow-soft cursor-default"
+              className="px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full font-body text-sm shadow-soft cursor-default flex flex-col items-center min-w-[80px]"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 }
@@ -75,6 +75,9 @@ export default function Skills() {
               exit={{ opacity: 0, y: -20 }}
               whileHover={{ scale: 1.1 }}
             >
+              {skill.image && (
+                <img src={skill.image} alt={skill.name + ' icon'} className="w-8 h-8 mb-1 rounded" />
+              )}
               {skill.name}
             </motion.span>
           ))}
