@@ -64,11 +64,11 @@ function formatTimelineDate(item: typeof timelineItems[number]) {
 export default function ExperienceTimeline() {
   let blockIdx = 0;
   return (
-    <section className="max-w-5xl mx-auto py-16 px-4 bg-gray-900 text-gray-200">
-      <h2 className="text-3xl font-heading text-center mb-12">Timeline</h2>
+    <section className="max-w-5xl mx-auto py-16 px-4 bg-background text-gray-200">
+      <h2 className="text-3xl font-heading text-center mb-12 text-primary">Timeline</h2>
       <div className="relative">
         {/* vertical center line */}
-        <div className="hidden md:block absolute left-1/2 top-0 w-px h-full bg-gray-700" />
+        <div className="hidden md:block absolute left-1/2 top-0 w-px h-full bg-gray-800" />
         <motion.div
           className="grid grid-cols-1 md:grid-cols-9 gap-6 md:gap-8 items-start relative"
           initial="hidden"
@@ -88,8 +88,8 @@ export default function ExperienceTimeline() {
                 const base = "col-span-1 md:col-span-4 p-4 md:p-6 rounded-lg";
                 const style =
                   item.type === "education"
-                    ? "border-2 border-accent bg-gray-800"
-                    : "bg-gray-800 shadow-soft";
+                    ? "border-2 border-primary bg-gray-900"
+                    : "bg-gray-900 shadow-soft border border-gray-800";
                 return (
                   <motion.div
                     key={item.date + item.title}
@@ -105,7 +105,7 @@ export default function ExperienceTimeline() {
                     variants={itemVariants}
                   >
                     <p className="text-sm text-gray-400">{formatTimelineDate(item)}</p>
-                    <h3 className="text-lg md:text-xl font-heading">{item.title}</h3>
+                    <h3 className="text-lg md:text-xl font-heading text-primary">{item.title}</h3>
                     <p className="font-body italic mb-2">
                       {item.organization} — {item.location}
                     </p>
