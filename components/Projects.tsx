@@ -87,7 +87,7 @@ export default function Projects() {
       : projects.filter((p) => p.tech.includes(filter));
 
   return (
-    <section className="max-w-5xl mx-auto py-16 px-4">
+    <section className="max-w-5xl mx-auto py-16 px-4 bg-gray-900 text-gray-200">
       <h2 className="text-3xl font-heading mb-6">Projects</h2>
       <div className="flex flex-wrap gap-2 mb-8">
         {categories.map((cat) => (
@@ -97,7 +97,7 @@ export default function Projects() {
             className={`px-4 py-2 rounded-lg transition-colors ${
               filter === cat
                 ? "bg-primary text-white"
-                : "bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+                : "bg-gray-800 text-gray-200"
             }`}
           >
             {cat}
@@ -109,17 +109,17 @@ export default function Projects() {
           <motion.div
             key={p.title}
             whileHover={{ scale: 1.05 }}
-            className="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-lg shadow-soft flex flex-col h-full min-h-[320px] transition-transform"
+            className="bg-gray-800 p-4 sm:p-6 rounded-lg shadow-soft flex flex-col h-full min-h-[320px] transition-transform"
           >
             <h3 className="text-lg sm:text-xl font-heading mb-2 break-words">{p.title}</h3>
-            <p className="text-body text-gray-600 dark:text-gray-300 mb-4 text-sm sm:text-base">
+            <p className="text-body text-gray-200 mb-4 text-sm sm:text-base">
               {p.description}
             </p>
             <div className="flex flex-wrap gap-2 mb-4">
               {p.tech.map((t) => (
                 <span
                   key={t}
-                  className="text-xs px-2 py-1 bg-gray-200 dark:bg-gray-700 rounded-full mb-1"
+                  className="text-xs px-2 py-1 bg-gray-900 rounded-full mb-1"
                 >
                   {t}
                 </span>

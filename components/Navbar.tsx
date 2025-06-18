@@ -14,9 +14,9 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full backdrop-blur-md bg-white/30 dark:bg-gray-900/30 shadow-soft z-50">
+    <nav className="fixed top-0 w-full backdrop-blur-md bg-gray-900/90 shadow-soft z-50">
       <div className="max-w-5xl mx-auto flex items-center justify-between p-4">
-        <Link href="/" className="text-2xl font-heading font-bold">
+        <Link href="/" className="text-2xl font-heading font-bold text-gray-100">
           SurajG.
         </Link>
         <div className="hidden md:flex space-x-16">
@@ -25,7 +25,7 @@ export default function Navbar() {
               key={l.href}
               href={l.href}
               className={`font-body text-lg md:text-xl ${
-                pathname === l.href ? "text-primary" : "text-gray-700 dark:text-gray-300"
+                pathname === l.href ? "text-primary" : "text-gray-100"
               } hover:text-primary transition-colors`}
             >
               {l.label}
@@ -43,13 +43,13 @@ export default function Navbar() {
             </svg>
           </button>
           {menuOpen && (
-            <div className="absolute right-4 top-16 bg-white dark:bg-gray-900 rounded-lg shadow-lg py-2 px-4 flex flex-col space-y-2 min-w-[140px] border border-gray-200 dark:border-gray-700 z-50">
+            <div className="absolute right-4 top-16 bg-gray-900 rounded-lg shadow-lg py-2 px-4 flex flex-col space-y-2 min-w-[140px] border border-gray-700 z-50">
               {links.map((l) => (
                 <Link
                   key={l.href}
                   href={l.href}
                   className={`font-body text-base py-2 px-2 rounded hover:bg-primary/10 ${
-                    pathname === l.href ? "text-primary" : "text-gray-700 dark:text-gray-300"
+                    pathname === l.href ? "text-primary" : "text-gray-100"
                   }`}
                   onClick={() => setMenuOpen(false)}
                 >
