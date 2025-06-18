@@ -87,8 +87,8 @@ export default function Projects() {
       : projects.filter((p) => p.tech.includes(filter));
 
   return (
-    <section className="max-w-5xl mx-auto py-16 px-4 bg-background text-gray-200">
-      <h2 className="text-3xl font-heading mb-6 text-primary">Projects</h2>
+    <section className="max-w-5xl mx-auto py-16 px-4 bg-primary text-white">
+      <h2 className="text-3xl font-heading mb-6">Projects</h2>
       <div className="flex flex-wrap gap-2 mb-8">
         {categories.map((cat) => (
           <button
@@ -96,8 +96,8 @@ export default function Projects() {
             onClick={() => setFilter(cat)}
             className={`px-4 py-2 rounded-lg transition-colors ${
               filter === cat
-                ? "bg-primary text-white"
-                : "bg-background text-gray-200 border border-gray-700"
+                ? "bg-white text-primary"
+                : "bg-primary text-white border border-white"
             }`}
           >
             {cat}
@@ -109,17 +109,17 @@ export default function Projects() {
           <motion.div
             key={p.title}
             whileHover={{ scale: 1.05 }}
-            className="bg-gray-900 p-4 sm:p-6 rounded-lg shadow-soft flex flex-col h-full min-h-[320px] transition-transform border border-gray-800"
+            className="bg-primary p-4 sm:p-6 rounded-lg shadow-soft flex flex-col h-full min-h-[320px] transition-transform border border-white"
           >
-            <h3 className="text-lg sm:text-xl font-heading mb-2 break-words text-primary">{p.title}</h3>
-            <p className="text-body text-gray-200 mb-4 text-sm sm:text-base">
+            <h3 className="text-lg sm:text-xl font-heading mb-2 break-words">{p.title}</h3>
+            <p className="text-body mb-4 text-sm sm:text-base">
               {p.description}
             </p>
             <div className="flex flex-wrap gap-2 mb-4">
               {p.tech.map((t) => (
                 <span
                   key={t}
-                  className="text-xs px-2 py-1 bg-background border border-gray-700 rounded-full mb-1"
+                  className="text-xs px-2 py-1 bg-white text-primary border border-primary rounded-full mb-1"
                 >
                   {t}
                 </span>
@@ -130,12 +130,12 @@ export default function Projects() {
                 href={p.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-primary font-body hover:underline"
+                className="text-white font-body hover:underline"
               >
                 View Project
               </a>
             ) : (
-              <span className="inline-flex items-center text-gray-400 font-body">
+              <span className="inline-flex items-center text-white font-body">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 17a2 2 0 100-4 2 2 0 000 4zm6-6V9a6 6 0 10-12 0v2a2 2 0 00-2 2v6a2 2 0 002 2h12a2 2 0 002-2v-6a2 2 0 00-2-2zm-2 0H8V9a4 4 0 118 0v2z" />
                 </svg>

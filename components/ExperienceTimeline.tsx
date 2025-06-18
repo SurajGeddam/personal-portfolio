@@ -64,11 +64,11 @@ function formatTimelineDate(item: typeof timelineItems[number]) {
 export default function ExperienceTimeline() {
   let blockIdx = 0;
   return (
-    <section className="max-w-5xl mx-auto py-16 px-4 bg-background text-gray-200">
-      <h2 className="text-3xl font-heading text-center mb-12 text-primary">Timeline</h2>
+    <section className="max-w-5xl mx-auto py-16 px-4 bg-primary text-white">
+      <h2 className="text-3xl font-heading text-center mb-12">Timeline</h2>
       <div className="relative">
         {/* vertical center line */}
-        <div className="hidden md:block absolute left-1/2 top-0 w-px h-full bg-gray-800" />
+        <div className="hidden md:block absolute left-1/2 top-0 w-px h-full bg-white" />
         <motion.div
           className="grid grid-cols-1 md:grid-cols-9 gap-6 md:gap-8 items-start relative"
           initial="hidden"
@@ -79,7 +79,7 @@ export default function ExperienceTimeline() {
           {years.map((year) => (
             <>
               <div key={year} className="col-span-1 md:col-span-9 text-center mb-4 mt-8">
-                <span className="inline-block bg-primary text-white rounded-full px-4 py-1 text-lg font-heading shadow-soft">
+                <span className="inline-block bg-white text-primary rounded-full px-4 py-1 text-lg font-heading shadow-soft">
                   {year}
                 </span>
               </div>
@@ -88,8 +88,8 @@ export default function ExperienceTimeline() {
                 const base = "col-span-1 md:col-span-4 p-4 md:p-6 rounded-lg";
                 const style =
                   item.type === "education"
-                    ? "border-2 border-primary bg-gray-900"
-                    : "bg-gray-900 shadow-soft border border-gray-800";
+                    ? "border-2 border-white bg-primary"
+                    : "bg-primary shadow-soft border border-white";
                 return (
                   <motion.div
                     key={item.date + item.title}
@@ -104,12 +104,12 @@ export default function ExperienceTimeline() {
                     }
                     variants={itemVariants}
                   >
-                    <p className="text-sm text-gray-400">{formatTimelineDate(item)}</p>
-                    <h3 className="text-lg md:text-xl font-heading text-primary">{item.title}</h3>
+                    <p className="text-sm text-white">{formatTimelineDate(item)}</p>
+                    <h3 className="text-lg md:text-xl font-heading">{item.title}</h3>
                     <p className="font-body italic mb-2">
                       {item.organization} — {item.location}
                     </p>
-                    <ul className="list-disc list-inside space-y-1 text-gray-200">
+                    <ul className="list-disc list-inside space-y-1 text-white">
                       {item.bullets.map((b: string, i: number) => (
                         <li key={i}>{b}</li>
                       ))}

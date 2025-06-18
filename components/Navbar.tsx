@@ -14,9 +14,9 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full backdrop-blur-md bg-background/90 shadow-soft z-50">
+    <nav className="fixed top-0 w-full backdrop-blur-md bg-primary shadow-soft z-50">
       <div className="max-w-5xl mx-auto flex items-center justify-between p-4">
-        <Link href="/" className="text-2xl font-heading font-bold text-primary">
+        <Link href="/" className="text-2xl font-heading font-bold text-white">
           SurajG.
         </Link>
         <div className="hidden md:flex space-x-16">

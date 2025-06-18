@@ -32,8 +32,8 @@ export default function Skills() {
   const filtered = filter === "All" ? skills : skills.filter(s => s.category === filter);
 
   return (
-    <section className="max-w-5xl mx-auto py-16 px-4 bg-gray-900 text-gray-200">
-      <h2 className="text-3xl font-heading text-center mb-6">Skills &amp; Tools</h2>
+    <section className="max-w-5xl mx-auto py-16 px-4 bg-background text-gray-200">
+      <h2 className="text-3xl font-heading text-center mb-6 text-primary">Skills &amp; Tools</h2>
       <div className="flex justify-center gap-4 mb-8">
         {categories.map(cat => (
           <button
@@ -42,7 +42,7 @@ export default function Skills() {
             className={`px-4 py-2 rounded-lg font-body transition ${
               filter === cat
                 ? "bg-primary text-white"
-                : "bg-gray-800 text-gray-200"
+                : "bg-background text-gray-200 border border-gray-700"
             }`}
           >
             {cat}
@@ -61,7 +61,7 @@ export default function Skills() {
           {filtered.map(skill => (
             <motion.span
               key={skill.name}
-              className="relative flex flex-col items-center justify-center bg-gray-800 rounded-full shadow-soft cursor-pointer min-w-[128px] min-h-[128px] w-32 h-32 group transition-transform hover:scale-110"
+              className="relative flex flex-col items-center justify-center bg-background rounded-full shadow-soft cursor-pointer min-w-[128px] min-h-[128px] w-32 h-32 group transition-transform hover:scale-110 border border-gray-700"
               variants={{
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 }
@@ -69,14 +69,14 @@ export default function Skills() {
               exit={{ opacity: 0, y: -20 }}
             >
               {skill.image ? (
-                <span className="flex items-center justify-center w-44 h-44 bg-gray-900 rounded-full">
+                <span className="flex items-center justify-center w-44 h-44 bg-background rounded-full border border-primary">
                   <img src={skill.image} alt={skill.name + ' icon'} className="object-contain w-36 h-24" />
                 </span>
               ) : (
                 <span className="text-sm font-body text-gray-200">{skill.name}</span>
               )}
               {skill.image && (
-                <span className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-70 text-white text-xl font-bold rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="absolute inset-0 flex items-center justify-center bg-primary bg-opacity-80 text-white text-xl font-bold rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
                   {skill.name}
                 </span>
               )}
