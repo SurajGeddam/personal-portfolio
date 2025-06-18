@@ -64,7 +64,7 @@ function formatTimelineDate(item: typeof timelineItems[number]) {
 export default function ExperienceTimeline() {
   let blockIdx = 0;
   return (
-    <section className="max-w-5xl mx-auto py-16 px-4 bg-primary text-white">
+    <section className="max-w-5xl mx-auto py-16 px-4 bg-black text-white">
       <h2 className="text-3xl font-heading text-center mb-12">Timeline</h2>
       <div className="relative">
         {/* vertical center line */}
@@ -79,7 +79,7 @@ export default function ExperienceTimeline() {
           {years.map((year) => (
             <>
               <div key={year} className="col-span-1 md:col-span-9 text-center mb-4 mt-8">
-                <span className="inline-block bg-white text-primary rounded-full px-4 py-1 text-lg font-heading shadow-soft">
+                <span className="inline-block bg-white text-black rounded-full px-4 py-1 text-lg font-heading shadow-soft">
                   {year}
                 </span>
               </div>
@@ -88,8 +88,8 @@ export default function ExperienceTimeline() {
                 const base = "col-span-1 md:col-span-4 p-4 md:p-6 rounded-lg";
                 const style =
                   item.type === "education"
-                    ? "border-2 border-white bg-primary"
-                    : "bg-primary shadow-soft border border-white";
+                    ? "border-2 border-white bg-black"
+                    : "bg-black shadow-soft border border-white";
                 return (
                   <motion.div
                     key={item.date + item.title}

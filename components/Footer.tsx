@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="bg-primary text-white py-8">
+    <footer className="bg-black text-white py-8">
       <div className="max-w-5xl mx-auto px-4 text-center space-y-4">
         <p className="font-body">
           📧 <a href="mailto:geddamsuraj@gmail.com" className="hover:text-white text-white">geddamsuraj@gmail.com</a>

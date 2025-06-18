@@ -87,7 +87,7 @@ export default function Projects() {
       : projects.filter((p) => p.tech.includes(filter));
 
   return (
-    <section className="max-w-5xl mx-auto py-16 px-4 bg-primary text-white">
+    <section className="max-w-5xl mx-auto py-16 px-4 bg-black text-white">
       <h2 className="text-3xl font-heading mb-6">Projects</h2>
       <div className="flex flex-wrap gap-2 mb-8">
         {categories.map((cat) => (
@@ -96,8 +96,8 @@ export default function Projects() {
             onClick={() => setFilter(cat)}
             className={`px-4 py-2 rounded-lg transition-colors ${
               filter === cat
-                ? "bg-white text-primary"
-                : "bg-primary text-white border border-white"
+                ? "bg-white text-black"
+                : "bg-black text-white border border-white"
             }`}
           >
             {cat}
@@ -109,7 +109,7 @@ export default function Projects() {
           <motion.div
             key={p.title}
             whileHover={{ scale: 1.05 }}
-            className="bg-primary p-4 sm:p-6 rounded-lg shadow-soft flex flex-col h-full min-h-[320px] transition-transform border border-white"
+            className="bg-black p-4 sm:p-6 rounded-lg shadow-soft flex flex-col h-full min-h-[320px] transition-transform border border-white"
           >
             <h3 className="text-lg sm:text-xl font-heading mb-2 break-words">{p.title}</h3>
             <p className="text-body mb-4 text-sm sm:text-base">
@@ -119,7 +119,7 @@ export default function Projects() {
               {p.tech.map((t) => (
                 <span
                   key={t}
-                  className="text-xs px-2 py-1 bg-white text-primary border border-primary rounded-full mb-1"
+                  className="text-xs px-2 py-1 bg-white text-black border border-white rounded-full mb-1"
                 >
                   {t}
                 </span>
